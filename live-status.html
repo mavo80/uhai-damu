@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Blood Bank Status | Uhai Damu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <div class="logo-section">
+                <div class="logo">🩸</div>
+                <div class="brand-name">
+                    Uhai Damu
+                    <span>Kenya Blood Donation Network</span>
+                </div>
+            </div>
+            <ul class="upper-nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="live-status.html">Blood Bank</a></li>
+                <li><a href="donor-types.html">Blood Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
+                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
+                <li><a href="blood-group-chart.html">Golden Blood</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-status.html" class="active">Live Blood Bank Status</a></li>
+                <li><a href="blood-components.html">Blood Components</a></li>
+                <li><a href="blood-group-chart.html">Blood Group Chart</a></li>
+                <li><a href="donor-types.html">Donor Types</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-login">
+                <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>🏥 Live Blood Bank Status</h1>
+                <p>Check real-time blood availability across Nairobi and Kiambu counties. Select your location and blood type to find available stock.</p>
+            </div>
+
+            <!-- Search Form -->
+            <div class="search-container">
+                <h3 style="margin-bottom: 20px; color: var(--primary-red);">Search Blood Stock</h3>
+                <form id="bloodSearchForm">
+                    <div class="search-grid">
+                        <!-- Region/County Selection -->
+                        <div class="form-group">
+                            <label for="regionSelect">Region/County *</label>
+                            <select id="regionSelect" class="form-control" required>
+                                <option value="">Select County</option>
+                                <!-- Options populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <!-- Constituency Selection -->
+                        <div class="form-group">
+                            <label for="constituencySelect">Constituency *</label>
+                            <select id="constituencySelect" class="form-control" required>
+                                <option value="">Select Constituency</option>
+                                <!-- Options populated based on region -->
+                            </select>
+                        </div>
+
+                        <!-- City/Area (Auto-populated) -->
+                        <div class="form-group">
+                            <label for="citySelect">City/Area</label>
+                            <select id="citySelect" class="form-control">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+
+                        <!-- Blood Type -->
+                        <div class="form-group">
+                            <label for="bloodTypeSelect">Blood Type</label>
+                            <select id="bloodTypeSelect" class="form-control">
+                                <option value="">All Types</option>
+                                <option value="A+">A Positive (A+)</option>
+                                <option value="A-">A Negative (A-)</option>
+                                <option value="B+">B Positive (B+)</option>
+                                <option value="B-">B Negative (B-)</option>
+                                <option value="AB+">AB Positive (AB+)</option>
+                                <option value="AB-">AB Negative (AB-)</option>
+                                <option value="O+">O Positive (O+)</option>
+                                <option value="O-">O Negative (O-)</option>
+                            </select>
+                        </div>
+
+                        <!-- Blood Component -->
+                        <div class="form-group">
+                            <label for="componentSelect">Blood Component</label>
+                            <select id="componentSelect" class="form-control">
+                                <option value="">Whole Blood</option>
+                                <option value="PRBC">Packed Red Blood Cells</option>
+                                <option value="Platelets">Platelets</option>
+                                <option value="Plasma">Plasma</option>
+                                <option value="FFP">Fresh Frozen Plasma</option>
+                                <option value="Cryoprecipitate">Cryoprecipitate</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-search">
+                        🔍 Check Availability
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div id="stockResults">
+                <!-- Results will be displayed here by JavaScript -->
+                <div class="text-center" style="padding: 40px; color: var(--text-gray);">
+                    <p style="font-size: 48px; margin-bottom: 20px;">🩸</p>
+                    <p>Select your location above to view blood availability</p>
+                </div>
+            </div>
+
+            <!-- Information Section -->
+            <div class="info-section">
+                <h3>ℹ️ About Live Blood Stock Monitoring</h3>
+                <p>
+                    <strong>Why Live Stock Matters:</strong> Blood has a limited shelf life—red blood cells last 42 days, 
+                    platelets only 5 days, and plasma up to 1 year. Real-time monitoring ensures that hospitals 
+                    can quickly identify shortages and request donations before critical levels are reached.
+                </p>
+                <p>
+                    <strong>How It Works:</strong> Our system connects directly with hospital blood banks in Nairobi 
+                    and Kiambu counties. When blood is used or new donations arrive, the stock levels are updated 
+                    instantly. Donors within a 30km radius receive SMS alerts when their blood type is needed.
+                </p>
+                <p>
+                    <strong>Stock Level Indicators:</strong>
+                    <span style="color: var(--success-green); font-weight: bold;">● Green (Adequate)</span> - More than 8 units available,
+                    <span style="color: #f57c00; font-weight: bold;">● Orange (Low)</span> - 4-8 units remaining,
+                    <span style="color: var(--danger-red); font-weight: bold;">● Red (Critical)</span> - Less than 4 units, urgent donation needed.
+                </p>
+                <p>
+                    <strong>Coverage:</strong> Currently serving 17 constituencies in Nairobi City County and 
+                    12 constituencies in Kiambu County. We plan to expand nationwide by Year 2.
+                </p>
+            </div>
+
+            <!-- Available Locations Info -->
+            <div class="features-grid" style="margin-top: 30px;">
+                <div class="feature-card">
+                    <h3>📍 Nairobi City County</h3>
+                    <p>17 constituencies covered including Westlands, Starehe, Kasarani, Lang'ata, and all Embakasi regions. 
+                    Major hospitals: Kenyatta National Hospital, MP Shah, Aga Khan University Hospital.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📍 Kiambu County</h3>
+                    <p>12 constituencies covered including Thika Town, Ruiru, Juja, and Kikuyu. 
+                    Major hospitals: Thika Level 5 Hospital, Kiambu County Referral Hospital, Ruiru Sub-County Hospital.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Uhai Damu</h4>
+                <p>A initiative to connect blood donors with hospitals in Kenya.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="live-status.html">Blood Bank Status</a></p>
+                <p><a href="contact-us.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 Emergency: +254 700 000 000</p>
+                <p>📧 info@uhai-damu.co.ke</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

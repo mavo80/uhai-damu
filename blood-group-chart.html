@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Chart | Uhai Damu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩸</text></svg>">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <div class="logo-section">
+                <div class="logo">🩸</div>
+                <div class="brand-name">
+                    Uhai Damu
+                    <span>Kenya Blood Donation Network</span>
+                </div>
+            </div>
+            <ul class="upper-nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="live-status.html">Blood Bank</a></li>
+                <li><a href="donor-types.html">Blood Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
+                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
+                <li><a href="blood-group-chart.html">Golden Blood</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-status.html">Live Blood Bank Status</a></li>
+                <li><a href="blood-components.html">Blood Components</a></li>
+                <li><a href="blood-group-chart.html" class="active">Blood Group Chart</a></li>
+                <li><a href="donor-types.html">Donor Types</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-login">
+                <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            
+            <!-- Page Header -->
+            <div class="content-header">
+                <h1>🩸 Blood Group Compatibility Chart</h1>
+                <p>Understanding blood types and who can donate or receive from whom is crucial for safe transfusions. This chart shows the antigens and antibodies present in each blood type.</p>
+            </div>
+
+            <!-- Antigen Information -->
+            <div class="antigen-info">
+                <h3>🧬 Understanding Blood Types</h3>
+                <p>Blood types are determined by the presence or absence of certain antigens on red blood cells:</p>
+                
+                <div class="antigen-grid">
+                    <div class="antigen-box">
+                        <h4>🔴 ABO System</h4>
+                        <p><strong>Type A:</strong> Has A antigens, anti-B antibodies</p>
+                        <p><strong>Type B:</strong> Has B antigens, anti-A antibodies</p>
+                        <p><strong>Type AB:</strong> Has both A and B antigens, no antibodies</p>
+                        <p><strong>Type O:</strong> No A or B antigens, both anti-A and anti-B antibodies</p>
+                    </div>
+                    <div class="antigen-box">
+                        <h4>🔵 Rh System</h4>
+                        <p><strong>Rh Positive (+):</strong> Has Rh (D) antigen</p>
+                        <p><strong>Rh Negative (-):</strong> No Rh (D) antigen, anti-Rh antibodies if exposed</p>
+                        <p><strong>Important:</strong> Rh- patients should only receive Rh- blood</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compatibility Table -->
+            <div class="content-header">
+                <h2>📊 Donation & Receiving Compatibility</h2>
+                <p>Use this table to understand which blood types can donate to or receive from other types:</p>
+            </div>
+
+            <table class="compatibility-table">
+                <thead>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Can Donate To</th>
+                        <th>Can Receive From</th>
+                        <th>Population % (Kenya)</th>
+                        <th>Special Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A+</strong></td>
+                        <td>A+, AB+</td>
+                        <td>A+, A-, O+, O-</td>
+                        <td>~27%</td>
+                        <td>Second most common type</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A-</strong></td>
+                        <td>A+, A-, AB+, AB-</td>
+                        <td>A-, O-</td>
+                        <td>~6%</td>
+                        <td>Universal plasma donor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B+</strong></td>
+                        <td>B+, AB+</td>
+                        <td>B+, B-, O+, O-</td>
+                        <td>~20%</td>
+                        <td>Can receive B or O types</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B-</strong></td>
+                        <td>B+, B-, AB+, AB-</td>
+                        <td>B-, O-</td>
+                        <td>~2%</td>
+                        <td>Rare but versatile donor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AB+</strong></td>
+                        <td>AB+ only</td>
+                        <td>All types (Universal Recipient)</td>
+                        <td>~4%</td>
+                        <td>Can receive from anyone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AB-</strong></td>
+                        <td>AB+, AB-</td>
+                        <td>A-, B-, AB-, O-</td>
+                        <td>~1%</td>
+                        <td>Rare universal plasma recipient</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O+</strong></td>
+                        <td>O+, A+, B+, AB+</td>
+                        <td>O+, O-</td>
+                        <td>~36%</td>
+                        <td>Most common type</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O-</strong></td>
+                        <td>All types (Universal Donor)</td>
+                        <td>O- only</td>
+                        <td>~4%</td>
+                        <td>Emergency donation type</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Special Blood Types Info -->
+            <div class="features-grid" style="margin-top: 30px;">
+                <div class="feature-card" style="border-left: 4px solid #FFD700;">
+                    <h3>🏆 Golden Blood (Rh-null)</h3>
+                    <p><strong>Ultimate Universal Donor:</strong> Rh-null blood lacks all 61 Rh antigens, making it the rarest blood type in the world. Only about 50 people worldwide have this type. It can be donated to anyone with any Rh type, but Rh-null individuals can only receive Rh-null blood.</p>
+                    <p><strong>Frequency:</strong> 1 in 6 million people</p>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid #FF6B6B;">
+                    <h3>🆘 Emergency Situations</h3>
+                    <p><strong>O-negative:</strong> Used in emergencies when there's no time to determine the patient's blood type. It's the safest choice for immediate transfusion.</p>
+                    <p><strong>AB-positive:</strong> Can receive any blood type in emergencies, making them ideal recipients when specific typing isn't available.</p>
+                </div>
+            </div>
+
+            <!-- Compatibility Icons Section -->
+            <div class="info-section" style="margin-top: 30px;">
+                <h3>🔍 Quick Compatibility Guide</h3>
+                <div class="features-grid" style="margin-top: 20px;">
+                    <div class="feature-card">
+                        <h4>✅ Can Donate</h4>
+                        <p>✓ Same blood type<br>
+                        ✓ Compatible types (see table)<br>
+                        ✓ O-negative to anyone<br>
+                        ✓ Rh-positive to Rh-positive</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>❌ Cannot Donate</h4>
+                        <p>✗ Different incompatible types<br>
+                        ✗ Rh-positive to Rh-negative<br>
+                        ✗ If you have antibodies against recipient's antigens<br>
+                        ✗ During certain medical conditions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Information -->
+            <div class="antigen-info" style="margin-top: 30px;">
+                <h3>🧪 How Blood Type is Determined</h3>
+                <p>Blood typing involves mixing your blood with antibodies against A and B antigens:</p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>Forward typing:</strong> Your red cells are mixed with anti-A and anti-B antibodies</li>
+                    <li><strong>Reverse typing:</strong> Your serum is mixed with known A and B red cells</li>
+                    <li><strong>Rh typing:</strong> Your red cells are tested with anti-D antibodies</li>
+                </ul>
+                <p><strong>Kenya National Blood Transfusion Service</strong> performs these tests on every donation to ensure safe transfusions.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Uhai Damu</h4>
+                <p>Connecting blood donors with hospitals in Kenya through technology.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <p><a href="blood-components.html">Blood Components</a></p>
+                <p><a href="donor-types.html">Donation Types</a></p>
+                <p><a href="blood-group-chart.html">Compatibility Chart</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +254 700 000 000</p>
+                <p>📧 info@uhai-damu.co.ke</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

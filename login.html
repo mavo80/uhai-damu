@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Uhai Damu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <div class="logo-section">
+                <div class="logo">🩸</div>
+                <div class="brand-name">
+                    Uhai Damu
+                    <span>Kenya Blood Donation Network</span>
+                </div>
+            </div>
+            <ul class="upper-nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="live-status.html">Blood Bank</a></li>
+                <li><a href="donor-types.html">Blood Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Donor</a></li>
+                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
+                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
+                <li><a href="blood-group-chart.html">Golden Blood</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="live-status.html">Live Blood Bank Status</a></li>
+                <li><a href="blood-components.html">Blood Components</a></li>
+                <li><a href="blood-group-chart.html">Blood Group Chart</a></li>
+                <li><a href="donor-types.html">Donor Types</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-login">
+                <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area" style="padding: 0; display: flex; align-items: center; min-height: calc(100vh - 70px);">
+            
+            <!-- Login Container -->
+            <div class="login-container">
+                <div class="login-grid">
+                    
+                    <!-- Left Side - Chart Section -->
+                    <div class="login-chart-section">
+                        <h2 style="margin-bottom: 20px;">📊 Blood Availability by Region</h2>
+                        <p style="opacity: 0.9; line-height: 1.6;">Current stock levels across Nairobi and Kiambu counties. Data updated in real-time from partner hospitals.</p>
+                        
+                        <!-- Custom Bar Chart -->
+                        <div id="customBarChart" class="chart-placeholder">
+                            <!-- Chart populated by JavaScript -->
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <h4 style="margin-bottom: 10px;">Current Status:</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">🟢 Adequate: >8 units | 🟡 Low: 4-8 units | 🔴 Critical: <4 units</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Login Form -->
+                    <div class="login-form-section">
+                        <div class="user-type-selector">
+                            <button class="user-type-btn active" data-type="donor">🩸 Donor</button>
+                            <button class="user-type-btn" data-type="doctor">👨‍⚕️ Doctor</button>
+                            <button class="user-type-btn" data-type="admin">👤 Admin</button>
+                        </div>
+
+                        <form id="loginForm" class="login-form">
+                            <input type="hidden" id="selectedUserType" value="donor">
+                            
+                            <h2 style="color: var(--primary-red); margin-bottom: 10px;">Welcome Back</h2>
+                            <p style="color: var(--text-gray); margin-bottom: 30px;">Sign in to access your account and continue saving lives</p>
+
+                            <div class="form-group">
+                                <label for="username">Phone Number / Username</label>
+                                <input type="text" id="username" placeholder="Enter Phone Number (+254...)" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter your password" required>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <label style="display: flex; align-items: center; gap: 8px;">
+                                    <input type="checkbox" style="width: auto;">
+                                    <span style="font-size: 14px;">Remember me</span>
+                                </label>
+                                <a href="#" style="color: var(--primary-red); font-size: 14px; text-decoration: none;">Forgot password?</a>
+                            </div>
+
+                            <button type="submit" class="btn-login">🔐 Sign In</button>
+
+                            <div class="signup-link">
+                                <p>Don't have an account? <a href="#">Sign up here</a></p>
+                            </div>
+                        </form>
+
+                        <!-- New User Registration Section -->
+                        <div style="margin-top: 30px; padding: 20px; background-color: var(--light-gray); border-radius: 8px;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 10px;">🆕 New to Uhai Damu?</h4>
+                            <p style="font-size: 14px; color: var(--text-gray); margin-bottom: 15px;">Register as a blood donor and join our life-saving network</p>
+                            <a href="index.html" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px; display: block; background-color: var(--white); color: var(--primary-red); border: 2px solid var(--primary-red);">Register as Donor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Uhai Damu</h4>
+                <p>Connecting blood donors with hospitals in Kenya through technology.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="live-status.html">Blood Bank Status</a></p>
+                <p><a href="contact-us.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 Emergency: +254 700 000 000</p>
+                <p>📧 info@uhai-damu.co.ke</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
