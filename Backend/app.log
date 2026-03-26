@@ -1,0 +1,174 @@
+2026-03-20 12:18:28,020 - __main__ - INFO - Initializing database...
+2026-03-20 12:18:28,098 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,154 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,158 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,161 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,164 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,168 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,171 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,174 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,178 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,182 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:18:28,182 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,185 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,214 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.100.57:5001
+2026-03-20 12:18:28,214 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-20 12:18:28,216 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 12:18:28,554 - __main__ - INFO - Initializing database...
+2026-03-20 12:18:28,629 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,632 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,635 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,638 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,640 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,721 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,725 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,729 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,733 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,736 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:18:28,737 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,739 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:18:28,757 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 12:18:28,760 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 12:24:34,788 - __main__ - INFO - Initializing database...
+2026-03-20 12:24:34,869 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,872 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,878 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,884 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,889 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,898 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,925 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,930 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,949 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,952 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:24:34,952 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,955 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:34,992 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.100.57:5001
+2026-03-20 12:24:34,992 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-20 12:24:34,993 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 12:24:35,304 - __main__ - INFO - Initializing database...
+2026-03-20 12:24:35,378 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,383 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,387 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,390 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,394 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,397 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,400 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,406 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,409 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,412 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:24:35,412 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,414 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:24:35,432 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 12:24:35,435 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 12:29:32,949 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 12:29:33,088 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 12:29:34,172 - __main__ - INFO - Initializing database...
+2026-03-20 12:29:34,403 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,411 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,416 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,421 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,427 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,433 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,437 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,443 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,449 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,455 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:29:34,456 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,466 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:29:34,514 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 12:29:34,521 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:02:25,111 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:02:25,202 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:02:25,654 - __main__ - INFO - Initializing database...
+2026-03-20 13:02:25,751 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,754 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,757 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,761 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,764 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,769 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,772 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,775 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,779 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,783 - __main__ - INFO - Database tables created successfully
+2026-03-20 13:02:25,783 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,786 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:25,814 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 13:02:25,820 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:02:26,842 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:02:26,890 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:02:27,289 - __main__ - INFO - Initializing database...
+2026-03-20 13:02:27,371 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,508 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,511 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,513 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,516 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,518 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,520 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,522 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,524 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,526 - __main__ - INFO - Database tables created successfully
+2026-03-20 13:02:27,527 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,529 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:27,548 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 13:02:27,551 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:02:28,566 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:02:28,641 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:02:29,027 - __main__ - INFO - Initializing database...
+2026-03-20 13:02:29,104 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,107 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,110 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,112 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,115 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,117 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,119 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,122 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,124 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,127 - __main__ - INFO - Database tables created successfully
+2026-03-20 13:02:29,127 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,129 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:29,145 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 13:02:29,147 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:02:30,160 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:02:30,219 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:02:30,592 - __main__ - INFO - Initializing database...
+2026-03-20 13:02:30,682 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,684 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,686 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,689 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,698 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,701 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,703 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,705 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,708 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,710 - __main__ - INFO - Database tables created successfully
+2026-03-20 13:02:30,710 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,712 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:30,726 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 13:02:30,729 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:02:49,826 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:02:49,895 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:02:50,246 - __main__ - INFO - Initializing database...
+2026-03-20 13:02:50,348 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,352 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,355 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,358 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,361 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,363 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,366 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,369 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,373 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,375 - __main__ - INFO - Database tables created successfully
+2026-03-20 13:02:50,376 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,378 - __main__ - INFO - Database connection established successfully
+2026-03-20 13:02:50,395 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 13:02:50,398 - werkzeug - INFO -  * Debugger PIN: 403-244-152
+2026-03-20 13:03:51,648 - werkzeug - INFO -  * Detected change in 'C:\\Users\\marvi\\Desktop\\Project-1\\backend\\app.py', reloading
+2026-03-20 13:03:51,735 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:03:58,290 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 13:09:53,290 - werkzeug - INFO -  * Restarting with stat

@@ -4,53 +4,385 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Uhai Damu</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ℹ️</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .top-nav {
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .top-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 32px;
+            background: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .brand-name {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .brand-name span {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            opacity: 0.8;
+        }
+
+        .upper-nav-links {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .upper-nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .upper-nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .main-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 90px auto 0;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            height: fit-content;
+            position: sticky;
+            top: 90px;
+        }
+
+        .sidebar-header {
+            background: #c41e3a;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .sidebar-header h3 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        .sidebar-menu li {
+            margin: 5px 0;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+            font-weight: 500;
+        }
+
+        .sidebar-menu a:hover {
+            background: #ffebee;
+            color: #c41e3a;
+            border-left-color: #c41e3a;
+        }
+
+        .sidebar-menu a::before {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+        }
+
+        .sidebar-menu li:nth-child(1) a::before { content: "🏠"; }
+        .sidebar-menu li:nth-child(2) a::before { content: "🏥"; }
+        .sidebar-menu li:nth-child(3) a::before { content: "🧬"; }
+        .sidebar-menu li:nth-child(4) a::before { content: "🩸"; }
+        .sidebar-menu li:nth-child(5) a::before { content: "👥"; }
+        .sidebar-menu li:nth-child(6) a::before { content: "ℹ️"; }
+        .sidebar-menu li:nth-child(7) a::before { content: "📞"; }
+        .sidebar-menu li:nth-child(8) a::before { content: "🔒"; }
+
+        .sidebar-divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 15px 20px;
+        }
+
+        .sidebar-footer {
+            padding: 15px 20px;
+        }
+
+        .btn-login-sidebar {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #c41e3a;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-login-sidebar:hover {
+            background: #8b0000;
+            transform: translateY(-2px);
+        }
+
+        .content-area {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ffebee;
+        }
+
+        .page-header h1 {
+            color: #c41e3a;
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .value-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            color: #c41e3a;
+            margin-bottom: 10px;
+        }
+
+        .stats-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            margin-top: 50px;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                margin-top: 70px;
+            }
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+            .upper-nav-links {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="top-nav">
         <div class="top-nav-container">
             <div class="logo-section">
                 <div class="logo">🩸</div>
                 <div class="brand-name">
-                    Uhai Damu
-                    <span>Kenya Blood Transfusion Service Partner</span>
+                    UHAI DAMU
+                    <span>Kenya Blood Donation Network</span>
                 </div>
             </div>
             <ul class="upper-nav-links">
                 <li><a href="login.html">Login</a></li>
-                <li><a href="live-status.html">Blood Bank</a></li>
-                <li><a href="donor-types.html">Blood Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
-                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
-                <li><a href="blood-group-chart.html">Golden Blood</a></li>
+                <li><a href="blood-bank.html">Blood Bank</a></li>
+                <li><a href="blood-donor.html">Blood Donor</a></li>
+                <li><a href="universal-donor.html">Universal Donor</a></li>
+                <li><a href="universal-receiver.html">Universal Receiver</a></li>
+                <li><a href="rarest-blood.html">Rarest Blood</a></li>
+                <li><a href="golden-blood.html">Golden Blood</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="main-container">
         <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>🩸 Navigation</h3>
+            </div>
             <ul class="sidebar-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="live-status.html">Live Blood Bank Status</a></li>
                 <li><a href="blood-components.html">Blood Components</a></li>
                 <li><a href="blood-group-chart.html">Blood Group Chart</a></li>
                 <li><a href="donor-types.html">Donor Types</a></li>
-                <li><a href="about-us.html" class="active">About Us</a></li>
+                <li><a href="about-us.html" style="background:#ffebee; color:#c41e3a; border-left-color:#c41e3a;">About Us</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
             <div class="sidebar-divider"></div>
-            <div class="sidebar-login">
+            <div class="sidebar-footer">
                 <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
             </div>
         </aside>
 
         <main class="content-area">
-            <div class="content-header">
-                <h1>ℹ️ About Uhai Damu</h1>
+            <div class="page-header">
+                <h1>
+                    <span>ℹ️</span>
+                    About Uhai Damu
+                </h1>
                 <p>Learn about our mission, vision, and commitment to saving lives through blood donation in Kenya.</p>
             </div>
 
@@ -59,81 +391,87 @@
                 <p>Uhai Damu is Kenya's first real-time blood donation network, connecting voluntary donors with hospitals to ensure no life is lost due to blood shortage. We leverage technology to create a responsive, efficient, and life-saving blood supply chain.</p>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>🎯 Our Mission</h3>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Our Mission</h3>
                     <p>To eliminate preventable deaths caused by blood shortages in Kenya by creating a seamless connection between blood donors and healthcare facilities through innovative technology.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>👁️ Our Vision</h3>
+                <div class="value-card">
+                    <div class="value-icon">👁️</div>
+                    <h3>Our Vision</h3>
                     <p>A Kenya where every patient in need has immediate access to safe, compatible blood through a nationwide network of voluntary donors and efficient distribution systems.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>💡 Our Innovation</h3>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Our Innovation</h3>
                     <p>Real-time SMS alerts, live stock monitoring, and intelligent matching algorithms that connect the right donor with the right patient at the right time.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🤝 Our Partnership</h3>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Our Partnership</h3>
                     <p>Official partner with Kenya National Blood Transfusion Service (KNBTS), working together to strengthen the national blood supply system.</p>
                 </div>
             </div>
 
-            <div class="info-section">
-                <h3>📈 Our Impact Since Launch</h3>
-                <div class="stats-container">
-                    <div class="stat-card">
-                        <div class="stat-icon">🩸</div>
+            <div class="stats-section">
+                <h2 style="color:#c41e3a;">📈 Our Impact Since Launch</h2>
+                <div class="stats-grid">
+                    <div>
                         <div class="stat-number">5,000+</div>
-                        <div class="stat-label">Donors Registered</div>
+                        <p>Donors Registered</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🏥</div>
+                    <div>
                         <div class="stat-number">50+</div>
-                        <div class="stat-label">Hospitals Connected</div>
+                        <p>Hospitals Connected</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">⚡</div>
+                    <div>
                         <div class="stat-number">15 min</div>
-                        <div class="stat-label">Average Response Time</div>
+                        <p>Average Response Time</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">💚</div>
+                    <div>
                         <div class="stat-number">10,000+</div>
-                        <div class="stat-label">Lives Impacted</div>
+                        <p>Lives Impacted</p>
                     </div>
                 </div>
             </div>
 
-            <div class="info-section">
-                <h3>🏆 Recognition & Awards</h3>
-                <ul style="padding-left: 20px; line-height: 2;">
+            <div style="background: #f8f9fa; border-radius: 12px; padding: 25px; margin-top: 20px;">
+                <h3 style="color:#c41e3a;">🏆 Recognition & Awards</h3>
+                <ul style="margin-top: 15px; padding-left: 20px;">
                     <li><strong>2025:</strong> Best Digital Health Innovation - Kenya Health Tech Awards</li>
                     <li><strong>2025:</strong> Social Impact Award - Nairobi Innovation Week</li>
                     <li><strong>2024:</strong> KNBTS Partnership Excellence Award</li>
                     <li><strong>2024:</strong> Top 10 Health Startups in East Africa</li>
                 </ul>
             </div>
-
         </main>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About Uhai Damu</h4>
-                <p>Kenya's leading blood donation network connecting donors with hospitals.</p>
+                <h4>🩸 About Uhai Damu</h4>
+                <p>Kenya's leading blood donation network, connecting donors with hospitals in real-time. Saving lives through technology.</p>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📞 +254 700 000 000</p>
-                <p>📧 info@uhai-damu.co.ke</p>
+                <h4>📌 Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="live-status.html">Blood Availability</a></p>
+                <p><a href="donor-types.html">Donor Types</a></p>
+                <p><a href="contact-us.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>📞 Contact</h4>
+                <p>Emergency: +254 700 000 000</p>
+                <p>Email: info@uhai-damu.co.ke</p>
+                <p>📍 Nairobi, Kenya</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
+    <script src="js/simple-chatbot.js"></script>
 </body>
 </html>

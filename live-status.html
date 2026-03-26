@@ -4,202 +4,611 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Blood Bank Status | Uhai Damu</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        .top-nav {
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .page-header h1 {
+            color: #c41e3a;
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .search-section h2 {
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group select:focus, .form-group input:focus {
+            outline: none;
+            border-color: #c41e3a;
+        }
+
+        .btn-search {
+            background: #c41e3a;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-search:hover {
+            background: #8b0000;
+            transform: translateY(-2px);
+        }
+
+        .stats-mini {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-mini-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-bottom: 3px solid #c41e3a;
+        }
+
+        .stat-mini-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .hospital-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #c41e3a;
+            transition: all 0.3s;
+        }
+
+        .hospital-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .hospital-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hospital-header h3 {
+            color: #c41e3a;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hospital-contact {
+            color: #666;
+            font-size: 14px;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .blood-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .blood-card:hover {
+            transform: translateY(-3px);
+            border-color: #c41e3a;
+        }
+
+        .blood-type {
+            font-size: 22px;
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .blood-units {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .blood-status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-critical {
+            background: #ffebee;
+            color: #dc3545;
+        }
+
+        .status-low {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .status-adequate {
+            background: #e8f5e9;
+            color: #28a745;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #c41e3a;
+        }
+
+        .info-section h3 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .info-item h4 {
+            margin-bottom: 10px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .empty-state .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .search-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-mini {
+                grid-template-columns: 1fr;
+            }
+            .hospital-contact {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <div class="top-nav-container">
-            <div class="logo-section">
-                <div class="logo">🩸</div>
-                <div class="brand-name">
-                    Uhai Damu
-                    <span>Kenya Blood Donation Network</span>
-                </div>
-            </div>
-            <ul class="upper-nav-links">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="live-status.html">Blood Bank</a></li>
-                <li><a href="donor-types.html">Blood Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
-                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
-                <li><a href="blood-group-chart.html">Golden Blood</a></li>
-            </ul>
+    <div class="top-nav">
+        <div class="logo">
+            <h1>🩸 UHAI DAMU</h1>
         </div>
-    </nav>
-
-    <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul class="sidebar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="live-status.html" class="active">Live Blood Bank Status</a></li>
-                <li><a href="blood-components.html">Blood Components</a></li>
-                <li><a href="blood-group-chart.html">Blood Group Chart</a></li>
-                <li><a href="donor-types.html">Donor Types</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-            <div class="sidebar-divider"></div>
-            <div class="sidebar-login">
-                <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="content-area">
-            
-            <!-- Page Header -->
-            <div class="content-header">
-                <h1>🏥 Live Blood Bank Status</h1>
-                <p>Check real-time blood availability across Nairobi and Kiambu counties. Select your location and blood type to find available stock.</p>
-            </div>
-
-            <!-- Search Form -->
-            <div class="search-container">
-                <h3 style="margin-bottom: 20px; color: var(--primary-red);">Search Blood Stock</h3>
-                <form id="bloodSearchForm">
-                    <div class="search-grid">
-                        <!-- Region/County Selection -->
-                        <div class="form-group">
-                            <label for="regionSelect">Region/County *</label>
-                            <select id="regionSelect" class="form-control" required>
-                                <option value="">Select County</option>
-                                <!-- Options populated by JavaScript -->
-                            </select>
-                        </div>
-
-                        <!-- Constituency Selection -->
-                        <div class="form-group">
-                            <label for="constituencySelect">Constituency *</label>
-                            <select id="constituencySelect" class="form-control" required>
-                                <option value="">Select Constituency</option>
-                                <!-- Options populated based on region -->
-                            </select>
-                        </div>
-
-                        <!-- City/Area (Auto-populated) -->
-                        <div class="form-group">
-                            <label for="citySelect">City/Area</label>
-                            <select id="citySelect" class="form-control">
-                                <option value="">Select City</option>
-                            </select>
-                        </div>
-
-                        <!-- Blood Type -->
-                        <div class="form-group">
-                            <label for="bloodTypeSelect">Blood Type</label>
-                            <select id="bloodTypeSelect" class="form-control">
-                                <option value="">All Types</option>
-                                <option value="A+">A Positive (A+)</option>
-                                <option value="A-">A Negative (A-)</option>
-                                <option value="B+">B Positive (B+)</option>
-                                <option value="B-">B Negative (B-)</option>
-                                <option value="AB+">AB Positive (AB+)</option>
-                                <option value="AB-">AB Negative (AB-)</option>
-                                <option value="O+">O Positive (O+)</option>
-                                <option value="O-">O Negative (O-)</option>
-                            </select>
-                        </div>
-
-                        <!-- Blood Component -->
-                        <div class="form-group">
-                            <label for="componentSelect">Blood Component</label>
-                            <select id="componentSelect" class="form-control">
-                                <option value="">Whole Blood</option>
-                                <option value="PRBC">Packed Red Blood Cells</option>
-                                <option value="Platelets">Platelets</option>
-                                <option value="Plasma">Plasma</option>
-                                <option value="FFP">Fresh Frozen Plasma</option>
-                                <option value="Cryoprecipitate">Cryoprecipitate</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn-search">
-                        🔍 Check Availability
-                    </button>
-                </form>
-            </div>
-
-            <!-- Results Section -->
-            <div id="stockResults">
-                <!-- Results will be displayed here by JavaScript -->
-                <div class="text-center" style="padding: 40px; color: var(--text-gray);">
-                    <p style="font-size: 48px; margin-bottom: 20px;">🩸</p>
-                    <p>Select your location above to view blood availability</p>
-                </div>
-            </div>
-
-            <!-- Information Section -->
-            <div class="info-section">
-                <h3>ℹ️ About Live Blood Stock Monitoring</h3>
-                <p>
-                    <strong>Why Live Stock Matters:</strong> Blood has a limited shelf life—red blood cells last 42 days, 
-                    platelets only 5 days, and plasma up to 1 year. Real-time monitoring ensures that hospitals 
-                    can quickly identify shortages and request donations before critical levels are reached.
-                </p>
-                <p>
-                    <strong>How It Works:</strong> Our system connects directly with hospital blood banks in Nairobi 
-                    and Kiambu counties. When blood is used or new donations arrive, the stock levels are updated 
-                    instantly. Donors within a 30km radius receive SMS alerts when their blood type is needed.
-                </p>
-                <p>
-                    <strong>Stock Level Indicators:</strong>
-                    <span style="color: var(--success-green); font-weight: bold;">● Green (Adequate)</span> - More than 8 units available,
-                    <span style="color: #f57c00; font-weight: bold;">● Orange (Low)</span> - 4-8 units remaining,
-                    <span style="color: var(--danger-red); font-weight: bold;">● Red (Critical)</span> - Less than 4 units, urgent donation needed.
-                </p>
-                <p>
-                    <strong>Coverage:</strong> Currently serving 17 constituencies in Nairobi City County and 
-                    12 constituencies in Kiambu County. We plan to expand nationwide by Year 2.
-                </p>
-            </div>
-
-            <!-- Available Locations Info -->
-            <div class="features-grid" style="margin-top: 30px;">
-                <div class="feature-card">
-                    <h3>📍 Nairobi City County</h3>
-                    <p>17 constituencies covered including Westlands, Starehe, Kasarani, Lang'ata, and all Embakasi regions. 
-                    Major hospitals: Kenyatta National Hospital, MP Shah, Aga Khan University Hospital.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>📍 Kiambu County</h3>
-                    <p>12 constituencies covered including Thika Town, Ruiru, Juja, and Kikuyu. 
-                    Major hospitals: Thika Level 5 Hospital, Kiambu County Referral Hospital, Ruiru Sub-County Hospital.</p>
-                </div>
-            </div>
-
-        </main>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </div>
 
-    <!-- Footer -->
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <span>🏥</span>
+                Live Blood Bank Status
+            </h1>
+            <p>Check real-time blood availability across Nairobi and Kiambu counties. Data updates automatically every 5 minutes.</p>
+        </div>
+
+        <div class="search-section">
+            <h2>🔍 Search Blood Stock</h2>
+            <div class="search-grid">
+                <div class="form-group">
+                    <label>📍 County</label>
+                    <select id="countySelect">
+                        <option value="">Select County</option>
+                        <option value="Nairobi City County">Nairobi City County</option>
+                        <option value="Kiambu County">Kiambu County</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>🏘️ Constituency</label>
+                    <select id="constituencySelect" disabled>
+                        <option value="">First select a county</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>🩸 Blood Type</label>
+                    <select id="bloodTypeSelect">
+                        <option value="all">All Blood Types</option>
+                        <option value="A+">A Positive (A+)</option>
+                        <option value="A-">A Negative (A-)</option>
+                        <option value="B+">B Positive (B+)</option>
+                        <option value="B-">B Negative (B-)</option>
+                        <option value="AB+">AB Positive (AB+)</option>
+                        <option value="AB-">AB Negative (AB-)</option>
+                        <option value="O+">O Positive (O+)</option>
+                        <option value="O-">O Negative (O-)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-search" onclick="searchBloodStock()">
+                🔍 Check Availability
+            </button>
+        </div>
+
+        <div class="stats-mini">
+            <div class="stat-mini-card">
+                <div class="stat-mini-number" id="hospitalCount">-</div>
+                <div>Hospitals</div>
+            </div>
+            <div class="stat-mini-card">
+                <div class="stat-mini-number" id="totalUnits">-</div>
+                <div>Total Units</div>
+            </div>
+            <div class="stat-mini-card">
+                <div class="stat-mini-number" id="lastUpdate">-</div>
+                <div>Last Update</div>
+            </div>
+        </div>
+
+        <div id="resultsSection">
+            <div class="empty-state">
+                <div class="icon">🩸</div>
+                <h3>No Results Yet</h3>
+                <p>Select your location and click "Check Availability" to see blood stock levels</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>ℹ️ About Live Blood Stock Monitoring</h3>
+            <p><strong>Why Live Stock Matters:</strong> Blood has a limited shelf life — red blood cells last 42 days, platelets only 5 days, and plasma up to 1 year. Real-time monitoring ensures that hospitals can quickly identify shortages and request donations before critical levels are reached.</p>
+            <p><strong>How It Works:</strong> Our system connects directly with hospital blood banks in Nairobi and Kiambu counties. When blood is used or new donations arrive, the stock levels are updated instantly.</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>🟢 Adequate</h4>
+                    <p>> 8 units available</p>
+                    <p style="color: #28a745;">Sufficient stock</p>
+                </div>
+                <div class="info-item">
+                    <h4>🟡 Low</h4>
+                    <p>4-8 units available</p>
+                    <p style="color: #f57c00;">Donations needed</p>
+                </div>
+                <div class="info-item">
+                    <h4>🔴 Critical</h4>
+                    <p>< 4 units available</p>
+                    <p style="color: #dc3545;">URGENT NEED</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Uhai Damu</h4>
-                <p>A initiative to connect blood donors with hospitals in Kenya.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="live-status.html">Blood Bank Status</a></p>
-                <p><a href="contact-us.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📞 Emergency: +254 700 000 000</p>
-                <p>📧 info@uhai-damu.co.ke</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
-        </div>
+        <p>© 2025 Uhai Damu - Kenya National Blood Transfusion Service Partner</p>
+        <p style="margin-top: 10px; font-size: 12px;">Emergency Hotline: +254 700 000 000</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        const constituencies = {
+            'Nairobi City County': [
+                'Dagoretti North', 'Dagoretti South', "Lang'ata", 'Kibra', 'Roysambu',
+                'Kasarani', 'Ruaraka', 'Embakasi South', 'Embakasi North', 'Embakasi Central',
+                'Embakasi East', 'Embakasi West', 'Makadara', 'Kamukunji', 'Starehe',
+                'Mathare', 'Westlands'
+            ],
+            'Kiambu County': [
+                'Kiambaa', 'Kikuyu', 'Limuru', 'Gatundu North', 'Gatundu South',
+                'Juja', 'Thika Town', 'Ruiru', 'Githunguri', 'Kiambu',
+                'Kabete', 'Lari'
+            ]
+        };
+
+        document.getElementById('countySelect').addEventListener('change', function() {
+            const county = this.value;
+            const constituencySelect = document.getElementById('constituencySelect');
+            constituencySelect.innerHTML = '<option value="">All Constituencies</option>';
+            constituencySelect.disabled = !county;
+            
+            if (county && constituencies[county]) {
+                constituencies[county].forEach(constituency => {
+                    const option = document.createElement('option');
+                    option.value = constituency;
+                    option.textContent = constituency;
+                    constituencySelect.appendChild(option);
+                });
+            }
+        });
+
+        function searchBloodStock() {
+            const county = document.getElementById('countySelect').value;
+            const constituency = document.getElementById('constituencySelect').value;
+            const bloodType = document.getElementById('bloodTypeSelect').value;
+            const resultsDiv = document.getElementById('resultsSection');
+            
+            if (!county) {
+                alert('Please select a county');
+                return;
+            }
+            
+            resultsDiv.innerHTML = '<div class="empty-state"><div class="spinner" style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #c41e3a; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div><p>Searching blood availability...</p></div>';
+            
+            setTimeout(() => {
+                const hospitals = [
+                    {
+                        name: 'Kenyatta National Hospital',
+                        phone: '+254 20 271 3344',
+                        email: 'info@knh.or.ke',
+                        address: 'Hospital Rd, Nairobi',
+                        stock: [
+                            { blood_type: 'A+', units: 15, status: 'adequate' },
+                            { blood_type: 'A-', units: 5, status: 'low' },
+                            { blood_type: 'B+', units: 12, status: 'adequate' },
+                            { blood_type: 'B-', units: 4, status: 'low' },
+                            { blood_type: 'AB+', units: 3, status: 'low' },
+                            { blood_type: 'AB-', units: 1, status: 'critical' },
+                            { blood_type: 'O+', units: 20, status: 'adequate' },
+                            { blood_type: 'O-', units: 2, status: 'critical' }
+                        ]
+                    },
+                    {
+                        name: 'MP Shah Hospital',
+                        phone: '+254 20 429 4000',
+                        email: 'info@mpshah.co.ke',
+                        address: 'Shivachi Rd, Nairobi',
+                        stock: [
+                            { blood_type: 'A+', units: 10, status: 'adequate' },
+                            { blood_type: 'B+', units: 8, status: 'low' },
+                            { blood_type: 'O+', units: 12, status: 'adequate' },
+                            { blood_type: 'O-', units: 3, status: 'critical' }
+                        ]
+                    },
+                    {
+                        name: 'Aga Khan University Hospital',
+                        phone: '+254 20 366 0000',
+                        email: 'info@agakhanhospital.org',
+                        address: '3rd Parklands Ave, Nairobi',
+                        stock: [
+                            { blood_type: 'A+', units: 18, status: 'adequate' },
+                            { blood_type: 'B+', units: 15, status: 'adequate' },
+                            { blood_type: 'O+', units: 25, status: 'adequate' },
+                            { blood_type: 'AB-', units: 1, status: 'critical' }
+                        ]
+                    },
+                    {
+                        name: 'Thika Level 5 Hospital',
+                        phone: '+254 67 222 021',
+                        email: 'thikahospital@health.go.ke',
+                        address: 'General Kago Rd, Thika',
+                        stock: [
+                            { blood_type: 'A+', units: 8, status: 'low' },
+                            { blood_type: 'B+', units: 6, status: 'low' },
+                            { blood_type: 'O+', units: 10, status: 'adequate' },
+                            { blood_type: 'O-', units: 2, status: 'critical' }
+                        ]
+                    },
+                    {
+                        name: 'Kiambu County Referral Hospital',
+                        phone: '+254 67 222 000',
+                        email: 'kiambuhospital@health.go.ke',
+                        address: 'Kiambu Town',
+                        stock: [
+                            { blood_type: 'A+', units: 7, status: 'low' },
+                            { blood_type: 'B+', units: 5, status: 'low' },
+                            { blood_type: 'O+', units: 9, status: 'adequate' }
+                        ]
+                    }
+                ];
+                
+                let filteredHospitals = hospitals;
+                if (bloodType !== 'all') {
+                    filteredHospitals = hospitals.filter(h => 
+                        h.stock.some(s => s.blood_type === bloodType)
+                    ).map(h => ({
+                        ...h,
+                        stock: h.stock.filter(s => s.blood_type === bloodType)
+                    }));
+                }
+                
+                let totalUnits = 0;
+                filteredHospitals.forEach(h => {
+                    h.stock.forEach(s => totalUnits += s.units);
+                });
+                
+                document.getElementById('hospitalCount').textContent = filteredHospitals.length;
+                document.getElementById('totalUnits').textContent = totalUnits;
+                document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+                
+                if (filteredHospitals.length === 0) {
+                    resultsDiv.innerHTML = `
+                        <div class="empty-state">
+                            <div class="icon">🔍</div>
+                            <h3>No Results Found</h3>
+                            <p>No blood stock available for the selected criteria</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                let html = '';
+                filteredHospitals.forEach(hospital => {
+                    html += `
+                        <div class="hospital-card">
+                            <div class="hospital-header">
+                                <h3>
+                                    <span>🏥</span>
+                                    ${hospital.name}
+                                </h3>
+                            </div>
+                            <div class="hospital-contact">
+                                <span>📞 ${hospital.phone}</span>
+                                <span>📧 ${hospital.email}</span>
+                                <span>📍 ${hospital.address}</span>
+                            </div>
+                            <div class="stock-grid">
+                    `;
+                    
+                    hospital.stock.forEach(item => {
+                        const statusClass = `status-${item.status}`;
+                        const statusText = item.status === 'adequate' ? 'Adequate' : 
+                                          item.status === 'low' ? 'Low' : 'Critical';
+                        
+                        html += `
+                            <div class="blood-card">
+                                <div class="blood-type">${item.blood_type}</div>
+                                <div class="blood-units">${item.units}</div>
+                                <span class="blood-status ${statusClass}">${statusText}</span>
+                            </div>
+                        `;
+                    });
+                    
+                    html += `</div></div>`;
+                });
+                
+                resultsDiv.innerHTML = html;
+            }, 500);
+        }
+    </script>
+    <script src="js/simple-chatbot.js"></script>
 </body>
 </html>

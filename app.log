@@ -1,0 +1,905 @@
+2026-03-18 19:14:38,329 - __main__ - INFO - Initializing database...
+2026-03-18 19:14:40,121 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:40,506 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:40,571 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:41,064 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:41,081 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:41,103 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:41,747 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:42,273 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:42,443 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:42,520 - __main__ - INFO - Database tables created successfully
+2026-03-18 19:14:42,521 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:42,618 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:43,351 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.57:5000
+2026-03-18 19:14:43,352 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-18 19:14:43,377 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 19:14:44,130 - __main__ - INFO - Initializing database...
+2026-03-18 19:14:44,300 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,317 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,327 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,356 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,363 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,382 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,391 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,416 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,427 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,436 - __main__ - INFO - Database tables created successfully
+2026-03-18 19:14:44,436 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,441 - __main__ - INFO - Database connection established successfully
+2026-03-18 19:14:44,480 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 19:14:44,526 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-18 19:16:05,961 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:05] "GET / HTTP/1.1" 200 -
+2026-03-18 19:16:06,128 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:06] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:07,708 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:07] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:23,587 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:23] "GET /login.html HTTP/1.1" 200 -
+2026-03-18 19:16:23,604 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:23] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:23,911 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:23] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:26,383 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:26] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 19:16:26,548 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:26] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:26,704 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:26] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:28,559 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:28] "GET /donor-types.html HTTP/1.1" 200 -
+2026-03-18 19:16:28,610 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:28] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:28,634 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:28] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:30,909 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:30] "GET /universal-donor.html HTTP/1.1" 200 -
+2026-03-18 19:16:31,107 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:31] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2026-03-18 19:16:31,247 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:31] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:31,312 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:31] "GET /js/chatbot.js HTTP/1.1" 200 -
+2026-03-18 19:16:34,757 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:34] "GET /index.html HTTP/1.1" 200 -
+2026-03-18 19:16:35,088 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:35] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:35,090 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:35] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:16:37,388 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:37] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 19:16:37,697 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:37] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:16:37,722 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:16:37] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:21:07,263 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:07] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-18 19:21:07,300 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:07] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:21:07,527 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:07] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:21:10,069 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:10] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 19:21:10,317 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:10] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:21:10,404 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:10] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:21:45,893 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:45] "GET /index.html HTTP/1.1" 200 -
+2026-03-18 19:21:46,136 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:46] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:21:46,170 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:21:46] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:22,161 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:22] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-18 19:59:22,177 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:22] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:22,415 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:22] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:25,447 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:25] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 19:59:25,576 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:25] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:25,940 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:25] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:33,907 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:33] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 19:59:34,140 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:34] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:34,166 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:34] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:35,880 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:35] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 19:59:36,200 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:36] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:36,203 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:36] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:37,963 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:37] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 19:59:38,274 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:38] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:38,290 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:38] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:40,485 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:40] "GET /index.html HTTP/1.1" 200 -
+2026-03-18 19:59:40,723 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:40] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:40,747 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:40] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 19:59:42,270 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:42] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 19:59:42,588 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:42] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 19:59:42,588 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 19:59:42] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 20:12:03,316 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 20:12:03] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 20:12:03,525 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 20:12:03] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 20:12:03,566 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 20:12:03] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 22:37:50,460 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_api.py', reloading
+2026-03-18 22:37:51,372 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 22:37:51,937 - __main__ - INFO - Initializing database...
+2026-03-18 22:37:52,023 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,032 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,036 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,040 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,043 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,046 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,049 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,051 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,056 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,060 - __main__ - INFO - Database tables created successfully
+2026-03-18 22:37:52,060 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,064 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:37:52,079 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 22:37:52,082 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-18 22:40:00,488 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_routes.py', reloading
+2026-03-18 22:40:00,546 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 22:40:00,923 - __main__ - INFO - Initializing database...
+2026-03-18 22:40:01,004 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,007 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,010 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,013 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,016 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,019 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,022 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,025 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,028 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,031 - __main__ - INFO - Database tables created successfully
+2026-03-18 22:40:01,031 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,034 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:40:01,056 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 22:40:01,059 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-18 22:47:14,343 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_api.py', reloading
+2026-03-18 22:47:14,404 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 22:47:14,843 - __main__ - INFO - Initializing database...
+2026-03-18 22:47:14,934 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,938 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,941 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,944 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,948 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,951 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,955 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,958 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,962 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,965 - __main__ - INFO - Database tables created successfully
+2026-03-18 22:47:14,965 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,968 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:47:14,982 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 22:47:14,985 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-18 22:48:04,508 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_api.py', reloading
+2026-03-18 22:48:04,568 - werkzeug - INFO -  * Restarting with stat
+2026-03-18 22:48:04,990 - __main__ - INFO - Initializing database...
+2026-03-18 22:48:05,058 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,062 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,065 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,068 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,070 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,073 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,076 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,078 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,080 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,083 - __main__ - INFO - Database tables created successfully
+2026-03-18 22:48:05,083 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,085 - __main__ - INFO - Database connection established successfully
+2026-03-18 22:48:05,097 - werkzeug - WARNING -  * Debugger is active!
+2026-03-18 22:48:05,100 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-18 22:48:11,944 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 22:48:11] "GET / HTTP/1.1" 200 -
+2026-03-18 22:48:11,959 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 22:48:11] "GET /js/simple-chatbot.js HTTP/1.1" 200 -
+2026-03-18 22:48:12,116 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 22:48:12] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 22:48:12,263 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 22:48:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:07,092 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:07] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:09:07,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:07] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:08,210 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:08] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:10,423 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:10] "GET /blood-components.html HTTP/1.1" 200 -
+2026-03-18 23:09:10,509 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:10] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:10,661 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:10] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:10,749 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:10] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:12,515 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:12] "GET /blood-group-chart.html HTTP/1.1" 200 -
+2026-03-18 23:09:12,797 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:12] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:12,827 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:12] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:12,829 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:12] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:14,793 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:14] "GET /donor-types.html HTTP/1.1" 200 -
+2026-03-18 23:09:15,010 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:15] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:15,042 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:15] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:15,143 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:15] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:17,359 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:17] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:09:17,673 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:17] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:17,822 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:17] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:21,642 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:21] "GET /index.html HTTP/1.1" 200 -
+2026-03-18 23:09:21,854 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:21] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:09:21,888 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:21] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:09:22,004 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:09:22] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:15:56,451 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:15:56] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:15:56,669 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:15:56] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:15:56,713 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:15:56] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:15,709 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:15] "GET /blood-components.html HTTP/1.1" 200 -
+2026-03-18 23:16:16,012 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:16] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:16:16,029 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:16] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:16,031 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:16] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:17,565 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:17] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:16:17,820 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:17] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:16:17,821 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:17] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:19,832 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:19] "GET /login.html HTTP/1.1" 200 -
+2026-03-18 23:16:19,994 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:19] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:16:20,146 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:20] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:20,147 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:20] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:16:22,851 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:22] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:16:23,090 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:23] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:16:23,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:16:23] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:33:23,258 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:23] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-18 23:33:23,270 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:23] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:33:23,516 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:23] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:33:23,575 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:23] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:33:29,570 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:29] "GET /login.html?type=donor HTTP/1.1" 200 -
+2026-03-18 23:33:29,788 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:29] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-18 23:33:29,835 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:29] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-18 23:33:29,886 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:29] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-18 23:33:32,461 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:32] "GET /live-status.html HTTP/1.1" 200 -
+2026-03-18 23:33:33,021 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2026 23:33:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-19 19:27:29,865 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:27:29] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 19:27:29,996 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:27:29] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 19:27:30,161 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:27:30] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 19:27:30,458 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:27:30] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-19 19:32:07,511 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:32:07] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 19:32:07,544 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:32:07] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 19:32:07,773 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:32:07] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 19:32:07,844 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:32:07] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-19 19:48:51,971 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_api.py', reloading
+2026-03-19 19:48:52,960 - werkzeug - INFO -  * Restarting with stat
+2026-03-19 19:49:00,884 - __main__ - INFO - Initializing database...
+2026-03-19 19:49:01,081 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,152 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,159 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,167 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,176 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,183 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,191 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,198 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,204 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,211 - __main__ - INFO - Database tables created successfully
+2026-03-19 19:49:01,212 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,221 - __main__ - INFO - Database connection established successfully
+2026-03-19 19:49:01,361 - werkzeug - WARNING -  * Debugger is active!
+2026-03-19 19:49:01,409 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-19 19:52:05,822 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:52:05] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 19:52:05,856 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:52:05] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 19:52:05,929 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:52:05] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 19:52:06,264 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 19:52:06] "GET /js/simple-chatbot.js HTTP/1.1" 200 -
+2026-03-19 22:44:31,152 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:44:31] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 22:44:31,169 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:44:31] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 22:44:31,378 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:44:31] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 22:44:31,477 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:44:31] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-19 22:45:25,489 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:45:25] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 22:45:25,501 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:45:25] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 22:45:25,731 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:45:25] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 22:45:25,804 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:45:25] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-19 22:46:04,254 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:46:04] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-19 22:46:04,274 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:46:04] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-19 22:46:04,508 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:46:04] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-19 22:46:04,583 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 22:46:04] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 08:01:38,060 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:01:38] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 08:01:38,388 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:01:38] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 08:01:38,388 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:01:38] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 08:01:38,389 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:01:38] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 08:08:27,463 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:27] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 08:08:27,590 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:27] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 08:08:27,658 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:27] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 08:08:27,801 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:27] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 08:08:46,089 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:46] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 08:08:46,117 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:46] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 08:08:46,343 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:46] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 08:08:46,418 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:08:46] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 08:11:40,716 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:11:40] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 08:11:40,727 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:11:40] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 08:11:41,001 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:11:41] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 08:11:41,040 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 08:11:41] "GET /js/simple-chatbot.js HTTP/1.1" 200 -
+2026-03-20 08:50:25,598 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\chatbot_api.py', reloading
+2026-03-20 08:50:25,729 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 08:50:28,311 - __main__ - INFO - Initializing database...
+2026-03-20 08:50:28,512 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,517 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,521 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,525 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,529 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,533 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,537 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,540 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,545 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,549 - __main__ - INFO - Database tables created successfully
+2026-03-20 08:50:28,549 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,553 - __main__ - INFO - Database connection established successfully
+2026-03-20 08:50:28,696 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 08:50:28,713 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 09:02:30,996 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:02:30] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 09:02:31,037 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:02:31] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 09:02:31,087 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:02:31] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 09:02:31,376 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:02:31] "GET /js/simple-chatbot.js HTTP/1.1" 200 -
+2026-03-20 09:30:55,610 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:30:55] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 09:30:55,626 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:30:55] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 09:30:55,871 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:30:55] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 09:30:55,923 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 09:30:55] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 10:46:12,475 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 10:46:12,861 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 10:46:16,485 - __main__ - INFO - Initializing database...
+2026-03-20 10:46:16,733 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,781 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,789 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,795 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,801 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,806 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,811 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,816 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,821 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,902 - __main__ - INFO - Database tables created successfully
+2026-03-20 10:46:16,903 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:16,911 - __main__ - INFO - Database connection established successfully
+2026-03-20 10:46:17,016 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 10:46:17,022 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:02:33,690 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:02:33,792 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:02:34,637 - __main__ - INFO - Initializing database...
+2026-03-20 11:02:34,821 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,826 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,831 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,837 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,843 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,849 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,856 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,861 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,869 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,873 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:02:34,874 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,880 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:34,917 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:02:34,925 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:02:36,999 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:02:37,110 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:02:37,923 - __main__ - INFO - Initializing database...
+2026-03-20 11:02:38,069 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,076 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,082 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,089 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,096 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,102 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,108 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,113 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,119 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,125 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:02:38,126 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,130 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:02:38,164 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:02:38,171 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:10:53,068 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:10:53,195 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:10:54,157 - __main__ - INFO - Initializing database...
+2026-03-20 11:10:54,328 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,355 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,360 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,365 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,371 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,376 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,384 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,391 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,397 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,403 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:10:54,404 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,409 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:10:54,446 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:10:54,452 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:12:30,380 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:12:30,539 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:12:31,331 - __main__ - INFO - Initializing database...
+2026-03-20 11:12:31,499 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,504 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,509 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,514 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,519 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,523 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,528 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,532 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,536 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,541 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:12:31,541 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,546 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:31,576 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:12:31,581 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:12:40,817 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:12:40,954 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:12:41,865 - __main__ - INFO - Initializing database...
+2026-03-20 11:12:42,035 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,040 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,046 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,052 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,057 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,062 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,066 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,071 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,076 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,080 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:12:42,081 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,085 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:42,120 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:12:42,126 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:12:47,294 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:12:47,381 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:12:48,163 - __main__ - INFO - Initializing database...
+2026-03-20 11:12:48,321 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,326 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,331 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,337 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,343 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,348 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,354 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,359 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,364 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,369 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:12:48,370 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,375 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:48,410 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:12:48,416 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:12:55,600 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:12:55,703 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:12:56,606 - __main__ - INFO - Initializing database...
+2026-03-20 11:12:56,780 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,786 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,791 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,796 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,800 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,804 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,808 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,812 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,817 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,821 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:12:56,822 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,826 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:12:56,855 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:12:56,861 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:12:59,960 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:13:00,083 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:13:00,935 - __main__ - INFO - Initializing database...
+2026-03-20 11:13:01,095 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,101 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,106 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,113 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,118 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,123 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,128 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,134 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,142 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,147 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:13:01,147 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,152 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:01,184 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:13:01,189 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:13:04,280 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:13:04,399 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:13:05,260 - __main__ - INFO - Initializing database...
+2026-03-20 11:13:05,434 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,440 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,445 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,449 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,453 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,458 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,463 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,467 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,472 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,476 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:13:05,477 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,481 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:05,515 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:13:05,521 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:13:06,579 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:13:06,681 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:13:07,546 - __main__ - INFO - Initializing database...
+2026-03-20 11:13:07,711 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,719 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,724 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,729 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,734 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,738 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,743 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,747 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,752 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,757 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:13:07,757 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,761 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:07,797 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:13:07,804 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:13:10,898 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:13:10,982 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:13:11,721 - __main__ - INFO - Initializing database...
+2026-03-20 11:13:11,934 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,940 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,946 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,953 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,960 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,970 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,976 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,982 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,986 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,991 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:13:11,992 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:11,997 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:13:12,026 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:13:12,034 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:17:07,530 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:17:07,670 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:17:08,570 - __main__ - INFO - Initializing database...
+2026-03-20 11:17:08,765 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,771 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,776 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,782 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,787 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,792 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,797 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,802 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,807 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,811 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:17:08,812 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,817 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:08,858 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:17:08,867 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:17:57,953 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:17:58,048 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:17:58,826 - __main__ - INFO - Initializing database...
+2026-03-20 11:17:58,994 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,055 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,060 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,065 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,069 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,074 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,080 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,085 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,090 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,095 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:17:59,095 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,100 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:17:59,135 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:17:59,141 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:18:55,245 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:18:55,364 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:18:56,236 - __main__ - INFO - Initializing database...
+2026-03-20 11:18:56,437 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,471 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,476 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,485 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,490 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,495 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,501 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,506 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,511 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,515 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:18:56,516 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,520 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:18:56,565 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:18:56,583 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:19:04,762 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:19:04,888 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:19:05,669 - __main__ - INFO - Initializing database...
+2026-03-20 11:19:05,862 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,869 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,876 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,881 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,886 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,891 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,898 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,904 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,911 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,915 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:19:05,916 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,921 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:19:05,961 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:19:05,968 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:22:26,144 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:22:26,277 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:22:27,067 - __main__ - INFO - Initializing database...
+2026-03-20 11:22:27,238 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,244 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,249 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,253 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,258 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,263 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,268 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,273 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,278 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,282 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:22:27,283 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,289 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:27,322 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:22:27,327 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:22:29,401 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:22:29,578 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:22:30,488 - __main__ - INFO - Initializing database...
+2026-03-20 11:22:30,666 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,672 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,677 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,682 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,687 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,692 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,696 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,701 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,707 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,711 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:22:30,711 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,716 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:22:30,757 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:22:30,765 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:04,641 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:04,742 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:05,658 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:05,839 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,892 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,896 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,901 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,906 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,910 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,914 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,919 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,923 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,927 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:05,928 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,933 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:05,968 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:05,974 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:07,033 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:07,140 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:07,869 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:08,030 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,036 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,041 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,046 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,051 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,056 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,060 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,065 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,071 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,076 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:08,076 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,081 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:08,113 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:08,117 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:11,232 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:11,380 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:12,334 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:12,490 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,496 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,501 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,505 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,511 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,516 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,522 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,528 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,532 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,537 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:12,538 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,542 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:12,575 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:12,582 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:13,666 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:13,851 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:14,673 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:14,832 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,837 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,843 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,850 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,856 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,862 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,868 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,874 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,879 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,885 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:14,886 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,891 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:14,940 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:14,947 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:16,014 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:16,131 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:17,029 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:17,215 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,241 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,245 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,250 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,254 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,259 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,263 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,267 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,271 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,275 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:17,276 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,279 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:17,315 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:17,323 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:19,407 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:19,545 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:20,796 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:20,979 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:20,983 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:20,987 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:20,991 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:20,996 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,001 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,006 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,016 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,023 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,028 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:21,029 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,034 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:21,072 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:21,078 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:23,144 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:23,305 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:25,067 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:25,334 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,369 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,436 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,572 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,700 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,735 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,870 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:25,932 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:26,121 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:26,305 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:26,305 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:26,318 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:26,502 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:26,509 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:23:27,621 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:23:27,745 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:23:31,216 - __main__ - INFO - Initializing database...
+2026-03-20 11:23:31,456 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,497 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,509 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,524 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,530 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,539 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,564 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,572 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,578 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,581 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:23:31,582 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,642 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:23:31,678 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:23:31,684 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:24:12,735 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:24:12,831 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:24:13,698 - __main__ - INFO - Initializing database...
+2026-03-20 11:24:13,855 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,863 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,869 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,880 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,886 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,917 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,921 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,927 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,932 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,937 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:24:13,937 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,942 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:24:13,976 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:24:13,982 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:24:24,086 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:24] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 11:24:24,146 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:24] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:24:24,191 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:24] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:24,414 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:24] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:31,749 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:31] "GET /login.html HTTP/1.1" 200 -
+2026-03-20 11:24:31,862 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:31] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:24:32,099 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:32] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:32,101 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:32] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:54,363 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:54] "GET /index.html HTTP/1.1" 200 -
+2026-03-20 11:24:54,632 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:54] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:24:54,703 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:54] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:54,703 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:54] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:59,273 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:59] "GET /login.html?type=donor HTTP/1.1" 200 -
+2026-03-20 11:24:59,555 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:59] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:24:59,612 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:59] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:24:59,615 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:24:59] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:26:46,238 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:26:46] "GET /login.html HTTP/1.1" 200 -
+2026-03-20 11:26:46,277 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:26:46] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:26:46,487 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:26:46] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:26:46,588 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:26:46] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:27:08,345 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:27:08] "GET /login.html HTTP/1.1" 200 -
+2026-03-20 11:27:08,382 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:27:08] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:27:08,616 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:27:08] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:27:08,695 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:27:08] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:42:32,981 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:32] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 11:42:33,062 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:33] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:42:33,242 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:33] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:42:33,315 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:33] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:42:38,053 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:38] "GET /login.html HTTP/1.1" 200 -
+2026-03-20 11:42:38,466 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:42:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-20 11:49:05,113 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:05] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 11:49:05,161 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:05] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:49:05,374 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:05] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:49:05,449 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:05] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:49:15,552 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:15] "GET /login.html HTTP/1.1" 200 -
+2026-03-20 11:49:15,834 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-20 11:49:44,564 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:49:44] "GET /register.html HTTP/1.1" 200 -
+2026-03-20 11:56:52,603 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:56:52,970 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:56:54,057 - __main__ - INFO - Initializing database...
+2026-03-20 11:56:54,248 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,254 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,259 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,264 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,270 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,276 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,281 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,286 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,290 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,295 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:56:54,296 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,301 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:56:54,430 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:56:54,438 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:57:05,745 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:57:05,850 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:57:06,704 - __main__ - INFO - Initializing database...
+2026-03-20 11:57:06,908 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,915 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,920 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,926 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,931 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,938 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,943 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,949 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,954 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,960 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:57:06,961 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:06,966 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:57:07,007 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:57:07,013 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:58:12,952 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:58:13,077 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:58:13,937 - __main__ - INFO - Initializing database...
+2026-03-20 11:58:14,155 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,192 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,197 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,202 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,207 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,212 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,218 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,223 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,228 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,271 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:58:14,312 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,336 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:14,378 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:58:14,387 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:58:16,491 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:58:16,645 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:58:17,769 - __main__ - INFO - Initializing database...
+2026-03-20 11:58:17,984 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:17,990 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:17,996 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,002 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,007 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,013 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,018 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,022 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,026 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,031 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:58:18,032 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,037 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:18,077 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:58:18,087 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:58:33,777 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:33] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 11:58:33,803 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:33] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:58:33,846 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:33] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:58:34,117 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:34] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:58:38,000 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:37] "GET /login.html?type=donor HTTP/1.1" 200 -
+2026-03-20 11:58:38,276 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:58:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-20 11:58:53,057 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\admin_api.py', reloading
+2026-03-20 11:58:53,173 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 11:58:54,038 - __main__ - INFO - Initializing database...
+2026-03-20 11:58:54,245 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,251 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,256 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,264 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,273 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,279 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,285 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,290 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,298 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,304 - __main__ - INFO - Database tables created successfully
+2026-03-20 11:58:54,304 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,310 - __main__ - INFO - Database connection established successfully
+2026-03-20 11:58:54,352 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 11:58:54,362 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 11:59:02,450 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:02] "[36mGET / HTTP/1.1[0m" 304 -
+2026-03-20 11:59:02,480 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:02] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-03-20 11:59:02,482 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:02] "[36mGET /js/main.js HTTP/1.1[0m" 304 -
+2026-03-20 11:59:02,785 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:02] "[36mGET /js/simple-chatbot.js HTTP/1.1[0m" 304 -
+2026-03-20 11:59:05,735 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:05] "GET /login.html?type=donor HTTP/1.1" 200 -
+2026-03-20 11:59:06,023 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-20 11:59:36,527 - werkzeug - INFO - 127.0.0.1 - - [20/Mar/2026 11:59:36] "GET /register.html HTTP/1.1" 200 -
+2026-03-20 12:06:43,292 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\app.py', reloading
+2026-03-20 12:06:43,377 - werkzeug - INFO -  * Restarting with stat
+2026-03-20 12:06:43,812 - __main__ - INFO - Initializing database...
+2026-03-20 12:06:43,952 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:43,964 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,020 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,045 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,063 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,084 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,090 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,094 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,099 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,103 - __main__ - INFO - Database tables created successfully
+2026-03-20 12:06:44,103 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,107 - __main__ - INFO - Database connection established successfully
+2026-03-20 12:06:44,124 - werkzeug - WARNING -  * Debugger is active!
+2026-03-20 12:06:44,126 - werkzeug - INFO -  * Debugger PIN: 455-880-275
+2026-03-20 12:07:25,538 - werkzeug - INFO -  * Detected change in 'c:\\Users\\marvi\\Desktop\\Project-1\\Backend\\app.py', reloading
+2026-03-20 12:07:25,605 - werkzeug - INFO -  * Restarting with stat

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Test</title>
+</head>
+<body>
+    <h2>Uhai Damu Chatbot Test</h2>
+    
+    <input type="text" id="question" size="50" value="What are blood donation requirements?">
+    <button onclick="askChatbot()">Ask</button>
+    
+    <div id="response" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; white-space: pre-line;"></div>
+
+    <script>
+        async function askChatbot() {
+            const question = document.getElementById('question').value;
+            const responseDiv = document.getElementById('response');
+            
+            responseDiv.innerHTML = '⏳ Asking DeepSeek AI...';
+            
+            try {
+                const res = await fetch('http://localhost:5001/api/chatbot/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: question })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    responseDiv.innerHTML = '🤖 **Response:**<br><br>' + data.response + 
+                        '<br><br><small>Source: ' + data.source + '</small>';
+                } else {
+                    responseDiv.innerHTML = '❌ Error: ' + data.error;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = '❌ Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

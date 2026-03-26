@@ -4,8 +4,588 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rarest Blood Types | Uhai Damu</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩸</text></svg>">
+    <style>
+        /* ===== UHAI DAMU THEME - RAREST BLOOD PAGE ===== */
+        
+        :root {
+            --primary-red: #c41e3a;
+            --primary-dark: #8b0000;
+            --primary-light: #ff6b6b;
+            --primary-soft: #ffebee;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #343a40;
+            --text-gray: #6c757d;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #17a2b8;
+            --purple: #6a1b9a;
+            --sidebar-width: 280px;
+            --header-height: 70px;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .top-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary-red);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .brand-name span {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.9;
+            letter-spacing: 2px;
+        }
+
+        .upper-nav-links {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .upper-nav-links li a {
+            color: var(--white);
+            padding: 25px 20px;
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .upper-nav-links li a:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-bottom-color: var(--white);
+        }
+
+        .upper-nav-links li a.active {
+            border-bottom-color: var(--white);
+            background-color: rgba(255,255,255,0.15);
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            margin-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height));
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--white);
+            position: fixed;
+            left: 0;
+            top: var(--header-height);
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+            z-index: 900;
+        }
+
+        .sidebar-header {
+            padding: 25px 20px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .sidebar-header h3 {
+            color: var(--primary-red);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 14px 25px;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-menu a:before {
+            width: 24px;
+            margin-right: 12px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: var(--primary-soft);
+            color: var(--primary-red);
+            border-left-color: var(--primary-red);
+        }
+
+        .sidebar-menu a.active {
+            background-color: var(--primary-soft);
+            color: var(--primary-red);
+            border-left-color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .sidebar-menu li:nth-child(1) a:before { content: "🏠"; }
+        .sidebar-menu li:nth-child(2) a:before { content: "🏥"; }
+        .sidebar-menu li:nth-child(3) a:before { content: "🧬"; }
+        .sidebar-menu li:nth-child(4) a:before { content: "🩸"; }
+        .sidebar-menu li:nth-child(5) a:before { content: "👥"; }
+        .sidebar-menu li:nth-child(6) a:before { content: "ℹ️"; }
+        .sidebar-menu li:nth-child(7) a:before { content: "📞"; }
+        .sidebar-menu li:nth-child(8) a:before { content: "🔒"; }
+
+        .sidebar-divider {
+            height: 1px;
+            background: var(--medium-gray);
+            margin: 20px 25px;
+        }
+
+        .sidebar-footer {
+            padding: 20px 25px;
+            border-top: 1px solid var(--medium-gray);
+        }
+
+        .btn-login-sidebar {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-red);
+            color: var(--white);
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-login-sidebar:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(196,30,58,0.3);
+        }
+
+        /* Content Area */
+        .content-area {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 30px;
+            background: var(--light-gray);
+            min-height: calc(100vh - var(--header-height));
+        }
+
+        .page-header {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .page-header h1 {
+            color: var(--primary-red);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        /* Hero Section - Purple theme for rare blood */
+        .hero-section {
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: var(--white);
+            padding: 60px 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "🩸";
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 120px;
+            opacity: 0.1;
+        }
+
+        .hero-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        /* Rare Blood Grid */
+        .rarest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .rare-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rare-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .rare-card:nth-child(1) {
+            border-bottom-color: #7b1fa2;
+        }
+        .rare-card:nth-child(2) {
+            border-bottom-color: #1976d2;
+        }
+        .rare-card:nth-child(3) {
+            border-bottom-color: #c2185b;
+        }
+
+        .rare-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .rare-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .rare-card:nth-child(1) h3 { color: #7b1fa2; }
+        .rare-card:nth-child(2) h3 { color: #1976d2; }
+        .rare-card:nth-child(3) h3 { color: #c2185b; }
+
+        .rare-percentage {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px;
+            margin: 30px 0;
+            box-shadow: var(--box-shadow);
+            border-left: 5px solid var(--primary-red);
+        }
+
+        .info-section h3 {
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-section h4 {
+            color: var(--primary-red);
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        .info-section p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .info-section ul {
+            padding-left: 20px;
+            color: var(--text-gray);
+        }
+
+        .info-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        /* Blood Badges */
+        .blood-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 5px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .blood-badge.Aplus { background: #ffebee; color: #c62828; }
+        .blood-badge.Aminus { background: #fce4ec; color: #880e4f; }
+        .blood-badge.Bplus { background: #f3e5f5; color: #7b1fa2; }
+        .blood-badge.Bminus { background: #ede7f6; color: #4527a0; }
+        .blood-badge.ABplus { background: #e8eaf6; color: #303f9f; }
+        .blood-badge.ABminus { background: #e3f2fd; color: #1976d2; }
+        .blood-badge.Oplus { background: #e8f5e8; color: #2e7d32; }
+        .blood-badge.Ominus { background: #f1f8e9; color: #558b2f; }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #f3e5f5, #fff);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--medium-gray);
+        }
+
+        .cta-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-red);
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            margin: 0 10px 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(196,30,58,0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(196,30,58,0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-red);
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            border: 2px solid var(--primary-red);
+            margin: 0 10px 10px;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-red);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(196,30,58,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 30px 30px;
+            margin-top: 50px;
+            margin-left: var(--sidebar-width);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--primary-light);
+            margin-bottom: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #adb5bd;
+            font-size: 15px;
+            line-height: 1.8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 14px;
+        }
+
+        .current-year {
+            display: inline-block;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .content-area,
+            .footer {
+                margin-left: 0;
+            }
+            
+            .rarest-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .upper-nav-links {
+                display: none;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+            
+            .hero-section h2 {
+                font-size: 30px;
+            }
+            
+            .rarest-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-primary, .btn-outline {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="top-nav">
@@ -56,39 +636,39 @@
                 <p>Understanding rare blood types and why they're critically important</p>
             </div>
 
-            <div class="hero-section" style="background: linear-gradient(135deg, #6a1b9a, #4a148c);">
+            <div class="hero-section">
                 <div style="font-size: 80px; margin-bottom: 20px;">🩸</div>
                 <h2>Rare Blood = Rare Donors</h2>
                 <p style="font-size: 20px;">Less than 1% of the population carries these precious blood types</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 40px 0;">
-                <div style="background: white; padding: 30px; border-radius: 16px; text-align: center; box-shadow: var(--box-shadow);">
-                    <div style="font-size: 48px; color: #7b1fa2;">🩸</div>
-                    <h3 style="color: #7b1fa2; margin: 15px 0;">AB Negative</h3>
-                    <div style="font-size: 36px; font-weight: 700; color: var(--dark-gray);">1%</div>
-                    <p style="color: var(--text-gray); margin-top: 10px;">of population</p>
-                    <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;">
+            <div class="rarest-grid">
+                <div class="rare-card">
+                    <div class="rare-icon">🩸</div>
+                    <h3>AB Negative</h3>
+                    <div class="rare-percentage">1%</div>
+                    <p style="color: var(--text-gray);">of population</p>
+                    <div style="margin-top: 20px;">
                         <span class="blood-badge ABminus">AB-</span>
                     </div>
                 </div>
                 
-                <div style="background: white; padding: 30px; border-radius: 16px; text-align: center; box-shadow: var(--box-shadow);">
-                    <div style="font-size: 48px; color: #1976d2;">🩸</div>
-                    <h3 style="color: #1976d2; margin: 15px 0;">B Negative</h3>
-                    <div style="font-size: 36px; font-weight: 700; color: var(--dark-gray);">2%</div>
-                    <p style="color: var(--text-gray); margin-top: 10px;">of population</p>
-                    <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;">
+                <div class="rare-card">
+                    <div class="rare-icon">🩸</div>
+                    <h3>B Negative</h3>
+                    <div class="rare-percentage">2%</div>
+                    <p style="color: var(--text-gray);">of population</p>
+                    <div style="margin-top: 20px;">
                         <span class="blood-badge Bminus">B-</span>
                     </div>
                 </div>
                 
-                <div style="background: white; padding: 30px; border-radius: 16px; text-align: center; box-shadow: var(--box-shadow);">
-                    <div style="font-size: 48px; color: #c2185b;">🩸</div>
-                    <h3 style="color: #c2185b; margin: 15px 0;">A Negative</h3>
-                    <div style="font-size: 36px; font-weight: 700; color: var(--dark-gray);">6%</div>
-                    <p style="color: var(--text-gray); margin-top: 10px;">of population</p>
-                    <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;">
+                <div class="rare-card">
+                    <div class="rare-icon">🩸</div>
+                    <h3>A Negative</h3>
+                    <div class="rare-percentage">6%</div>
+                    <p style="color: var(--text-gray);">of population</p>
+                    <div style="margin-top: 20px;">
                         <span class="blood-badge Aminus">A-</span>
                     </div>
                 </div>
@@ -98,21 +678,19 @@
                 <h3>🔬 Why Rare Blood Types Matter</h3>
                 <p>Patients with rare blood types face unique challenges. When they need a transfusion, finding compatible blood can be difficult and time-consuming. For some rare types, there may be fewer than 100 compatible donors in the entire country.</p>
                 
-                <div style="margin-top: 30px;">
-                    <h4 style="color: var(--primary-red); margin-bottom: 15px;">🎯 Challenges for Rare Blood Donors:</h4>
-                    <ul style="padding-left: 20px; color: var(--text-gray);">
-                        <li style="margin-bottom: 10px;">Limited donor pool when they need blood</li>
-                        <li style="margin-bottom: 10px;">May need to travel long distances to donate</li>
-                        <li style="margin-bottom: 10px;">Hospitals must maintain specialized inventories</li>
-                        <li style="margin-bottom: 10px;">Emergency situations require advanced planning</li>
-                    </ul>
-                </div>
+                <h4>🎯 Challenges for Rare Blood Donors:</h4>
+                <ul>
+                    <li>Limited donor pool when they need blood</li>
+                    <li>May need to travel long distances to donate</li>
+                    <li>Hospitals must maintain specialized inventories</li>
+                    <li>Emergency situations require advanced planning</li>
+                </ul>
             </div>
 
-            <div style="background: linear-gradient(135deg, #f3e5f5, #fff); border-radius: 16px; padding: 40px; margin-top: 40px;">
-                <h3 style="font-size: 24px; margin-bottom: 20px;">🎗️ Are You a Rare Blood Donor?</h3>
-                <p style="font-size: 18px; color: var(--text-gray); margin-bottom: 30px;">If you have AB negative, B negative, or any rare blood type, your donations are especially valuable. One donation can save multiple lives!</p>
-                <div style="display: flex; gap: 20px; justify-content: center;">
+            <div class="cta-box">
+                <h3>🎗️ Are You a Rare Blood Donor?</h3>
+                <p>If you have AB negative, B negative, or any rare blood type, your donations are especially valuable. One donation can save multiple lives!</p>
+                <div>
                     <a href="register.html" class="btn-primary">Register as Donor</a>
                     <a href="blood-group-chart.html" class="btn-outline">View All Blood Types</a>
                 </div>
@@ -137,11 +715,16 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Uhai Damu | KNBTS Partner</p>
+            <p>© <span class="current-year">2025</span> Uhai Damu | KNBTS Partner</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/chatbot.js"></script>
+    <script>
+        document.querySelectorAll('.current-year').forEach(el => {
+            el.textContent = new Date().getFullYear();
+        });
+    </script>
+    <!-- Simple Chatbot -->
+<script src="js/simple-chatbot.js"></script>
 </body>
 </html>

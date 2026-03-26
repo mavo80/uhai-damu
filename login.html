@@ -4,150 +4,371 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Uhai Damu</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+        }
+
+        .login-header {
+            background: linear-gradient(135deg, #c41e3a, #8b0000);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .login-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .login-body {
+            padding: 40px;
+        }
+
+        .user-type-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            background: #f5f5f5;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .user-type-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: transparent;
+            color: #666;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .user-type-btn.active {
+            background: #c41e3a;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #c41e3a;
+            box-shadow: 0 0 0 3px rgba(196,30,58,0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #c41e3a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background: #8b0000;
+            transform: translateY(-2px);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #c41e3a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            border-left: 4px solid #c62828;
+            font-size: 14px;
+        }
+
+        .info-text {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        .info-text p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 480px) {
+            .login-body {
+                padding: 25px;
+            }
+            .user-type-selector {
+                flex-wrap: wrap;
+            }
+            .user-type-btn {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <div class="top-nav-container">
-            <div class="logo-section">
-                <div class="logo">🩸</div>
-                <div class="brand-name">
-                    Uhai Damu
-                    <span>Kenya Blood Donation Network</span>
-                </div>
-            </div>
-            <ul class="upper-nav-links">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="live-status.html">Blood Bank</a></li>
-                <li><a href="donor-types.html">Blood Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Donor</a></li>
-                <li><a href="blood-group-chart.html">Universal Receiver</a></li>
-                <li><a href="blood-group-chart.html">Rarest Blood Type</a></li>
-                <li><a href="blood-group-chart.html">Golden Blood</a></li>
-            </ul>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>
+                <span>🩸</span>
+                Uhai Damu
+            </h1>
+            <p>Kenya Blood Donation Network</p>
         </div>
-    </nav>
+        <div class="login-body">
+            <div id="errorMessage" class="error-message"></div>
 
-    <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul class="sidebar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="live-status.html">Live Blood Bank Status</a></li>
-                <li><a href="blood-components.html">Blood Components</a></li>
-                <li><a href="blood-group-chart.html">Blood Group Chart</a></li>
-                <li><a href="donor-types.html">Donor Types</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-            <div class="sidebar-divider"></div>
-            <div class="sidebar-login">
-                <a href="login.html" class="btn-login-sidebar">🔐 Login / Register</a>
+            <div class="user-type-selector">
+                <button class="user-type-btn active" data-type="donor">
+                    <span>🩸</span> Donor
+                </button>
+                <button class="user-type-btn" data-type="admin">
+                    <span>👑</span> Admin
+                </button>
+                <button class="user-type-btn" data-type="hospital">
+                    <span>🏥</span> Hospital
+                </button>
             </div>
-        </aside>
 
-        <!-- Main Content -->
-        <main class="content-area" style="padding: 0; display: flex; align-items: center; min-height: calc(100vh - 70px);">
-            
-            <!-- Login Container -->
-            <div class="login-container">
-                <div class="login-grid">
-                    
-                    <!-- Left Side - Chart Section -->
-                    <div class="login-chart-section">
-                        <h2 style="margin-bottom: 20px;">📊 Blood Availability by Region</h2>
-                        <p style="opacity: 0.9; line-height: 1.6;">Current stock levels across Nairobi and Kiambu counties. Data updated in real-time from partner hospitals.</p>
-                        
-                        <!-- Custom Bar Chart -->
-                        <div id="customBarChart" class="chart-placeholder">
-                            <!-- Chart populated by JavaScript -->
-                        </div>
-                        
-                        <div style="margin-top: 30px;">
-                            <h4 style="margin-bottom: 10px;">Current Status:</h4>
-                            <p style="font-size: 14px; opacity: 0.9;">🟢 Adequate: >8 units | 🟡 Low: 4-8 units | 🔴 Critical: <4 units</p>
-                        </div>
-                    </div>
-
-                    <!-- Right Side - Login Form -->
-                    <div class="login-form-section">
-                        <div class="user-type-selector">
-                            <button class="user-type-btn active" data-type="donor">🩸 Donor</button>
-                            <button class="user-type-btn" data-type="doctor">👨‍⚕️ Doctor</button>
-                            <button class="user-type-btn" data-type="admin">👤 Admin</button>
-                        </div>
-
-                        <form id="loginForm" class="login-form">
-                            <input type="hidden" id="selectedUserType" value="donor">
-                            
-                            <h2 style="color: var(--primary-red); margin-bottom: 10px;">Welcome Back</h2>
-                            <p style="color: var(--text-gray); margin-bottom: 30px;">Sign in to access your account and continue saving lives</p>
-
-                            <div class="form-group">
-                                <label for="username">Phone Number / Username</label>
-                                <input type="text" id="username" placeholder="Enter Phone Number (+254...)" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="Enter your password" required>
-                            </div>
-
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                                <label style="display: flex; align-items: center; gap: 8px;">
-                                    <input type="checkbox" style="width: auto;">
-                                    <span style="font-size: 14px;">Remember me</span>
-                                </label>
-                                <a href="#" style="color: var(--primary-red); font-size: 14px; text-decoration: none;">Forgot password?</a>
-                            </div>
-
-                            <button type="submit" class="btn-login">🔐 Sign In</button>
-
-                            <div class="signup-link">
-                                <p>Don't have an account? <a href="#">Sign up here</a></p>
-                            </div>
-                        </form>
-
-                        <!-- New User Registration Section -->
-                        <div style="margin-top: 30px; padding: 20px; background-color: var(--light-gray); border-radius: 8px;">
-                            <h4 style="color: var(--primary-red); margin-bottom: 10px;">🆕 New to Uhai Damu?</h4>
-                            <p style="font-size: 14px; color: var(--text-gray); margin-bottom: 15px;">Register as a blood donor and join our life-saving network</p>
-                            <a href="index.html" class="btn-secondary" style="width: 100%; text-align: center; padding: 12px; display: block; background-color: var(--white); color: var(--primary-red); border: 2px solid var(--primary-red);">Register as Donor</a>
-                        </div>
-                    </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label id="emailLabel">Email / Phone Number</label>
+                    <input type="text" id="username" placeholder="Enter your email or phone number" required>
                 </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-login" id="loginBtn">Sign In</button>
+            </form>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="register.html">Register as Donor</a></p>
             </div>
 
-        </main>
+            <div class="info-text">
+                <p>🔑 <strong>Demo Credentials:</strong></p>
+                <p>Donor: any email / any password (will be redirected to donor dashboard)</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Uhai Damu</h4>
-                <p>Connecting blood donors with hospitals in Kenya through technology.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="live-status.html">Blood Bank Status</a></p>
-                <p><a href="contact-us.html">Contact Us</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📞 Emergency: +254 700 000 000</p>
-                <p>📧 info@uhai-damu.co.ke</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Uhai Damu | Kenya National Blood Transfusion Service Partner</p>
-        </div>
-    </footer>
+    <script>
+        let selectedUserType = 'donor';
 
-    <script src="js/main.js"></script>
+        document.querySelectorAll('.user-type-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.user-type-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedUserType = btn.dataset.type;
+                
+                const emailLabel = document.getElementById('emailLabel');
+                const usernameInput = document.getElementById('username');
+                
+                if (selectedUserType === 'donor') {
+                    emailLabel.innerHTML = 'Email / Phone Number';
+                    usernameInput.placeholder = 'Enter your email or phone number';
+                } else if (selectedUserType === 'admin') {
+                    emailLabel.innerHTML = 'Admin Email';
+                    usernameInput.placeholder = 'admin@uhai-damu.co.ke';
+                } else if (selectedUserType === 'hospital') {
+                    emailLabel.innerHTML = 'Hospital Email';
+                    usernameInput.placeholder = 'hospital@knh.co.ke';
+                }
+            });
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginBtn = document.getElementById('loginBtn');
+            const errorDiv = document.getElementById('errorMessage');
+            
+            if (!username || !password) {
+                errorDiv.textContent = 'Please enter both email/phone and password';
+                errorDiv.style.display = 'block';
+                setTimeout(() => errorDiv.style.display = 'none', 3000);
+                return;
+            }
+            
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '⏳ Logging in...';
+            
+            try {
+                if (selectedUserType === 'admin') {
+                    if (username === 'admin@uhai-damu.co.ke' && password === 'Admin123') {
+                        sessionStorage.setItem('adminLoggedIn', 'true');
+                        sessionStorage.setItem('adminName', 'Super Admin');
+                        sessionStorage.setItem('adminRole', 'super_admin');
+                        
+                        errorDiv.style.backgroundColor = '#e8f5e9';
+                        errorDiv.style.color = '#2e7d32';
+                        errorDiv.style.borderLeftColor = '#4caf50';
+                        errorDiv.textContent = '✅ Login successful! Redirecting to admin dashboard...';
+                        errorDiv.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            window.location.href = 'admin-dashboard.html';
+                        }, 1500);
+                    } else {
+                        throw new Error('Invalid admin credentials');
+                    }
+                } 
+                else if (selectedUserType === 'hospital') {
+                    // Hospital login - match with hospital dashboard
+                    if (username === 'hospital@knh.co.ke' && password === 'hospital123') {
+                        sessionStorage.setItem('hospitalLoggedIn', 'true');
+                        sessionStorage.setItem('hospitalName', 'Kenyatta National Hospital');
+                        sessionStorage.setItem('hospitalId', '1');
+                        
+                        errorDiv.style.backgroundColor = '#e8f5e9';
+                        errorDiv.style.color = '#2e7d32';
+                        errorDiv.style.borderLeftColor = '#4caf50';
+                        errorDiv.textContent = '✅ Login successful! Redirecting to hospital dashboard...';
+                        errorDiv.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            window.location.href = 'hospital-dashboard.html';
+                        }, 1500);
+                    } 
+                    else if (username === 'hospital@mpshah.co.ke' && password === 'hospital123') {
+                        sessionStorage.setItem('hospitalLoggedIn', 'true');
+                        sessionStorage.setItem('hospitalName', 'MP Shah Hospital');
+                        sessionStorage.setItem('hospitalId', '2');
+                        
+                        errorDiv.style.backgroundColor = '#e8f5e9';
+                        errorDiv.style.color = '#2e7d32';
+                        errorDiv.style.borderLeftColor = '#4caf50';
+                        errorDiv.textContent = '✅ Login successful! Redirecting to hospital dashboard...';
+                        errorDiv.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            window.location.href = 'hospital-dashboard.html';
+                        }, 1500);
+                    }
+                    else {
+                        throw new Error('Invalid hospital credentials');
+                    }
+                }
+                else {
+                    // Donor login - redirect to donor dashboard
+                    // Store donor info from registration (simulated)
+                    const donorData = {
+                        firstName: "Kirimi",
+                        lastName: "Marvin",
+                        email: username,
+                        phone: "+254712345678",
+                        bloodType: "O+",
+                        dateOfBirth: "1995-05-15",
+                        county: "Nairobi City County",
+                        constituency: "Westlands",
+                        weight: 70,
+                        height: 175
+                    };
+                    
+                    sessionStorage.setItem('donorLoggedIn', 'true');
+                    sessionStorage.setItem('donorData', JSON.stringify(donorData));
+                    
+                    errorDiv.style.backgroundColor = '#e8f5e9';
+                    errorDiv.style.color = '#2e7d32';
+                    errorDiv.style.borderLeftColor = '#4caf50';
+                    errorDiv.textContent = '✅ Login successful! Redirecting to donor dashboard...';
+                    errorDiv.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'donor-dashboard.html';
+                    }, 1500);
+                }
+            } catch (error) {
+                errorDiv.textContent = error.message || 'Invalid credentials. Please try again.';
+                errorDiv.style.backgroundColor = '#ffebee';
+                errorDiv.style.color = '#c62828';
+                errorDiv.style.borderLeftColor = '#c62828';
+                errorDiv.style.display = 'block';
+                setTimeout(() => errorDiv.style.display = 'none', 3000);
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = 'Sign In';
+            }
+        });
+    </script>
+    <script src="js/simple-chatbot.js"></script>
 </body>
 </html>
