@@ -208,8 +208,8 @@
 
             <form id="loginForm">
                 <div class="form-group">
-                    <label id="emailLabel">Email / Phone Number</label>
-                    <input type="text" id="username" placeholder="Enter your email or phone number" required>
+                    <label id="emailLabel">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
@@ -221,17 +221,14 @@
             <div class="signup-link">
                 <p>Don't have an account? <a href="register.html">Register as Donor</a></p>
             </div>
-
-            <div class="info-text">
-                <p>🔑 <strong>Demo Credentials:</strong></p>
-                <p>Donor: any email / any password (will be redirected to donor dashboard)</p>
-            </div>
         </div>
     </div>
 
     <script>
+        const API_BASE = '/api';
         let selectedUserType = 'donor';
 
+        // User type selection
         document.querySelectorAll('.user-type-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.user-type-btn').forEach(b => b.classList.remove('active'));
@@ -239,31 +236,32 @@
                 selectedUserType = btn.dataset.type;
                 
                 const emailLabel = document.getElementById('emailLabel');
-                const usernameInput = document.getElementById('username');
+                const emailInput = document.getElementById('email');
                 
                 if (selectedUserType === 'donor') {
-                    emailLabel.innerHTML = 'Email / Phone Number';
-                    usernameInput.placeholder = 'Enter your email or phone number';
+                    emailLabel.innerHTML = 'Email Address';
+                    emailInput.placeholder = 'Enter your email address';
                 } else if (selectedUserType === 'admin') {
                     emailLabel.innerHTML = 'Admin Email';
-                    usernameInput.placeholder = 'admin@uhai-damu.co.ke';
+                    emailInput.placeholder = 'admin@uhai-damu.co.ke';
                 } else if (selectedUserType === 'hospital') {
                     emailLabel.innerHTML = 'Hospital Email';
-                    usernameInput.placeholder = 'hospital@knh.co.ke';
+                    emailInput.placeholder = 'hospital@knh.co.ke';
                 }
             });
         });
 
+        // Handle login
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const loginBtn = document.getElementById('loginBtn');
             const errorDiv = document.getElementById('errorMessage');
             
-            if (!username || !password) {
-                errorDiv.textContent = 'Please enter both email/phone and password';
+            if (!email || !password) {
+                errorDiv.textContent = 'Please enter both email and password';
                 errorDiv.style.display = 'block';
                 setTimeout(() => errorDiv.style.display = 'none', 3000);
                 return;
@@ -273,11 +271,48 @@
             loginBtn.innerHTML = '⏳ Logging in...';
             
             try {
-                if (selectedUserType === 'admin') {
-                    if (username === 'admin@uhai-damu.co.ke' && password === 'Admin123') {
+                if (selectedUserType === 'donor') {
+                    const response = await fetch(`${API_BASE}/donor/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        sessionStorage.setItem('donorLoggedIn', 'true');
+                        sessionStorage.setItem('donorData', JSON.stringify(data.donor));
+                        sessionStorage.setItem('donorId', data.donor.id);
+                        sessionStorage.setItem('userType', 'donor');
+                        
+                        errorDiv.style.backgroundColor = '#e8f5e9';
+                        errorDiv.style.color = '#2e7d32';
+                        errorDiv.style.borderLeftColor = '#4caf50';
+                        errorDiv.textContent = '✅ Login successful! Redirecting to dashboard...';
+                        errorDiv.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            window.location.href = 'donor-dashboard.html';
+                        }, 1500);
+                    } else {
+                        throw new Error(data.error || 'Invalid credentials');
+                    }
+                } 
+                else if (selectedUserType === 'admin') {
+                    const response = await fetch(`${API_BASE}/admin/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
                         sessionStorage.setItem('adminLoggedIn', 'true');
-                        sessionStorage.setItem('adminName', 'Super Admin');
-                        sessionStorage.setItem('adminRole', 'super_admin');
+                        sessionStorage.setItem('adminName', data.admin.full_name);
+                        sessionStorage.setItem('adminRole', data.admin.role);
+                        sessionStorage.setItem('userType', 'admin');
                         
                         errorDiv.style.backgroundColor = '#e8f5e9';
                         errorDiv.style.color = '#2e7d32';
@@ -289,15 +324,23 @@
                             window.location.href = 'admin-dashboard.html';
                         }, 1500);
                     } else {
-                        throw new Error('Invalid admin credentials');
+                        throw new Error(data.error || 'Invalid credentials');
                     }
                 } 
                 else if (selectedUserType === 'hospital') {
-                    // Hospital login - match with hospital dashboard
-                    if (username === 'hospital@knh.co.ke' && password === 'hospital123') {
+                    const response = await fetch(`${API_BASE}/hospital/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
                         sessionStorage.setItem('hospitalLoggedIn', 'true');
-                        sessionStorage.setItem('hospitalName', 'Kenyatta National Hospital');
-                        sessionStorage.setItem('hospitalId', '1');
+                        sessionStorage.setItem('hospitalName', data.hospital.name);
+                        sessionStorage.setItem('hospitalId', data.hospital.id);
+                        sessionStorage.setItem('userType', 'hospital');
                         
                         errorDiv.style.backgroundColor = '#e8f5e9';
                         errorDiv.style.color = '#2e7d32';
@@ -308,60 +351,12 @@
                         setTimeout(() => {
                             window.location.href = 'hospital-dashboard.html';
                         }, 1500);
-                    } 
-                    else if (username === 'hospital@mpshah.co.ke' && password === 'hospital123') {
-                        sessionStorage.setItem('hospitalLoggedIn', 'true');
-                        sessionStorage.setItem('hospitalName', 'MP Shah Hospital');
-                        sessionStorage.setItem('hospitalId', '2');
-                        
-                        errorDiv.style.backgroundColor = '#e8f5e9';
-                        errorDiv.style.color = '#2e7d32';
-                        errorDiv.style.borderLeftColor = '#4caf50';
-                        errorDiv.textContent = '✅ Login successful! Redirecting to hospital dashboard...';
-                        errorDiv.style.display = 'block';
-                        
-                        setTimeout(() => {
-                            window.location.href = 'hospital-dashboard.html';
-                        }, 1500);
+                    } else {
+                        throw new Error(data.error || 'Invalid credentials');
                     }
-                    else {
-                        throw new Error('Invalid hospital credentials');
-                    }
-                }
-                else {
-                    // Donor login - redirect to donor dashboard
-                    // Store donor info from registration (simulated)
-                    const donorData = {
-                        firstName: "Kirimi",
-                        lastName: "Marvin",
-                        email: username,
-                        phone: "+254712345678",
-                        bloodType: "O+",
-                        dateOfBirth: "1995-05-15",
-                        county: "Nairobi City County",
-                        constituency: "Westlands",
-                        weight: 70,
-                        height: 175
-                    };
-                    
-                    sessionStorage.setItem('donorLoggedIn', 'true');
-                    sessionStorage.setItem('donorData', JSON.stringify(donorData));
-                    
-                    errorDiv.style.backgroundColor = '#e8f5e9';
-                    errorDiv.style.color = '#2e7d32';
-                    errorDiv.style.borderLeftColor = '#4caf50';
-                    errorDiv.textContent = '✅ Login successful! Redirecting to donor dashboard...';
-                    errorDiv.style.display = 'block';
-                    
-                    setTimeout(() => {
-                        window.location.href = 'donor-dashboard.html';
-                    }, 1500);
                 }
             } catch (error) {
-                errorDiv.textContent = error.message || 'Invalid credentials. Please try again.';
-                errorDiv.style.backgroundColor = '#ffebee';
-                errorDiv.style.color = '#c62828';
-                errorDiv.style.borderLeftColor = '#c62828';
+                errorDiv.textContent = error.message;
                 errorDiv.style.display = 'block';
                 setTimeout(() => errorDiv.style.display = 'none', 3000);
                 loginBtn.disabled = false;
